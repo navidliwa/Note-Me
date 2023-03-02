@@ -6,7 +6,7 @@ const db = require('../db/db.json');
 
 // Get route on /api/notes that gets all the notes
 router.get('/notes', (req, res) => {
-    readFromFile('../Develop/db/db.json')
+    readFromFile('./db/db.json')
         .then((data) => {
             const notes = JSON.parse(data);
 
@@ -15,7 +15,7 @@ router.get('/notes', (req, res) => {
                 id: uuidv4()
             }));
 
-            writeToFile('../Develop/db/db.json', updatedNotes);
+            writeToFile('./db/db.json', updatedNotes);
 
             res.json(updatedNotes);
         })
@@ -36,7 +36,7 @@ router.post('/notes', (req, res) => {
             id: uuidv4(),
         };
 
-        readAndAppend(newNote, '../Develop/db/db.json');
+        readAndAppend(newNote, './db/db.json');
         const response = {
             status: 'success',
             body: newNote
@@ -52,13 +52,13 @@ router.post('/notes', (req, res) => {
 router.delete('/notes/:id', (req, res) => {
     const Id = req.params.id;
     console.log(Id);
-    readFromFile('../Develop/db/db.json')
+    readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
             // use filter to filter out the item with the desired id
             const result = json.filter((note) => note.id !== Id);
 
-            writeToFile('../Develop/db/db.json', result);
+            writeToFile('./db/db.json', result);
 
             res.json(`Note with id:${Id} has been deleted 🗑️!`);
         });
