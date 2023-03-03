@@ -28,7 +28,7 @@ router.get('/notes', (req, res) => {
 // Post route to add a note
 router.post('/notes', (req, res) => {
     const { title, text } = req.body;
-
+    
     if (title && text) {
         const newNote = {
             title,
