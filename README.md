@@ -32,7 +32,7 @@ Here are some screenshots detailing the site's appearance:
 
 
 ## Usage
-To start writing a new note simply click the "+" icon in the top right of the page. This will create a new note which you can name inside of the first prompt and add the body of the note inside the second prompt. To save a note, users can click the save button next to the "+" icon in the top right. Once saved, you can click any note on the left-hand sidebar to view that note or click the trashcan icon to delete it.
+To start writing a new note simply click the "+" icon in the top right of the page. This will create a new note which you can name inside of the first entry and add the body of the note inside the second entry. To save a note, users can click the save button next to the "+" icon in the top right. Once saved, you can click any note on the left-hand sidebar to view that note or click the trashcan icon to delete it.
 
 
 ## Features
